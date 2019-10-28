@@ -12,18 +12,18 @@ module.exports = {
       .then(function(dbHeadline) {
         if (dbHeadline.length === 0) {
           res.json({
-            message: "No new articles today. Check back tomorrow!"
+            message: "No more new articles"
           });
         }
         else {
           res.json({
-            message: "Added " + dbHeadline.length + " new articles!"
+            message: "Added " + dbHeadline.length + " new articles."
           });
         }
       })
       .catch(function(err) {
         res.json({
-          message: "Scrape complete!!"
+          message: "Scrape Done"
         });
       });
   }
